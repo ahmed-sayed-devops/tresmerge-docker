@@ -1,6 +1,7 @@
 
 services:
   node-app:
+    image: a7medsayed/express-node-app
     container_name: express-app-cont
     ports:
       - "4000:4000"
