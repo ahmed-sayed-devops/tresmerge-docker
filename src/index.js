@@ -56,7 +56,7 @@ mongoose.connect(URI)
 app.get('/', (req, res) => {
   redisClient.set('product', 'Sample Product...');
   console.log(`traffic from host: ${os.hostname}`);
-  res.send('👋HI,four Update with eatchtower, Hello from Express App running on Docker!');
+  res.send('👋HI,four Update with watchtower, Hello from Express App running on Docker!');
 });
 app.get('/data',  async (req, res) => {
  const product = await redisClient.get('product');

@@ -4,9 +4,17 @@ services:
     image: a7medsayed/express-node-app
     env_file:
       - ./.env
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure  
+      update_config:
+        parallelism: 2
+        delay: 10s       
     depends_on:
       - mongo 
       - redis 
+   
 
   # postgres:
   #   image: postgres
